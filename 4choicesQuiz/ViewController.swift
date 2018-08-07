@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Next: UIButton!
     
     var CorrectAns = String()
+    var LastNum = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,42 +38,51 @@ class ViewController: UIViewController {
         var RandomNum = arc4random() % 4
         RandomNum += 1
         
-        switch (RandomNum) {
-        case 1:
-            question.text = "やっぱあれってすげえよな。最後までチョコたっぷりだし"
-            answer1.setTitle("ポッキー", for: UIControlState.normal)
-            answer2.setTitle("パックンチョ", for: UIControlState.normal)
-            answer3.setTitle("トッポ", for: UIControlState.normal)
-            answer4.setTitle("コアラのマーチ", for: UIControlState.normal)
-            CorrectAns = "3"
-            break
-        case 2:
-            question.text = "最後に勝つのはもちろん"
-            answer1.setTitle("正義", for: UIControlState.normal)
-            answer2.setTitle("俺", for: UIControlState.normal)
-            answer3.setTitle("人間", for: UIControlState.normal)
-            answer4.setTitle("それ以外", for: UIControlState.normal)
-            CorrectAns = "4"
-            break
-        case 3:
-            question.text = "俺の〇〇についてこれるか"
-            answer1.setTitle("気持ち", for: UIControlState.normal)
-            answer2.setTitle("速さ", for: UIControlState.normal)
-            answer3.setTitle("R", for: UIControlState.normal)
-            answer4.setTitle("素晴らしさ", for: UIControlState.normal)
-            CorrectAns = "3"
-            break
-        case 4:
-            question.text = "一番信じられないのは"
-            answer1.setTitle("勉強してね〜やべ〜", for: UIControlState.normal)
-            answer2.setTitle("今日寝てね〜やべ〜", for: UIControlState.normal)
-            answer3.setTitle("怒らないから言ってみなさい", for: UIControlState.normal)
-            answer4.setTitle("絶対大丈夫", for: UIControlState.normal)
-            CorrectAns = "4"
-            break
-        default:
-            break
+        if(LastNum != RandomNum){
+            switch (RandomNum) {
+            case 1:
+                question.text = "やっぱあれってすげえよな。最後までチョコたっぷりだし"
+                answer1.setTitle("ポッキー", for: UIControlState.normal)
+                answer2.setTitle("パックンチョ", for: UIControlState.normal)
+                answer3.setTitle("トッポ", for: UIControlState.normal)
+                answer4.setTitle("コアラのマーチ", for: UIControlState.normal)
+                CorrectAns = "3"
+                LastNum = 1
+                break
+            case 2:
+                question.text = "最後に勝つのはもちろん"
+                answer1.setTitle("正義", for: UIControlState.normal)
+                answer2.setTitle("俺", for: UIControlState.normal)
+                answer3.setTitle("人間", for: UIControlState.normal)
+                answer4.setTitle("それ以外", for: UIControlState.normal)
+                CorrectAns = "4"
+                LastNum = 2
+                break
+            case 3:
+                question.text = "俺の〇〇についてこれるか"
+                answer1.setTitle("気持ち", for: UIControlState.normal)
+                answer2.setTitle("速さ", for: UIControlState.normal)
+                answer3.setTitle("R", for: UIControlState.normal)
+                answer4.setTitle("素晴らしさ", for: UIControlState.normal)
+                CorrectAns = "3"
+                LastNum = 3
+                break
+            case 4:
+                question.text = "一番信じられないのは"
+                answer1.setTitle("勉強してね〜やべ〜", for: UIControlState.normal)
+                answer2.setTitle("今日寝てね〜やべ〜", for: UIControlState.normal)
+                answer3.setTitle("怒らないから言ってみなさい", for: UIControlState.normal)
+                answer4.setTitle("絶対大丈夫", for: UIControlState.normal)
+                CorrectAns = "4"
+                LastNum = 4
+                break
+            default:
+                break
+            }
+        }else{
+            RandomQuestions()
         }
+        
     }
     
     func Hide() {
