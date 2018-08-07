@@ -37,21 +37,33 @@
                                 <rect key="frame" x="16" y="203" width="343" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button1Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5B-dL-AxC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2N-tK-qEw">
                                 <rect key="frame" x="16" y="264" width="343" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button2Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qc6-XT-yyb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmw-4F-VxP">
                                 <rect key="frame" x="16" y="325" width="343" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button3Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4P9-Bf-bd3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svu-Id-Qvv">
                                 <rect key="frame" x="16" y="386" width="343" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Button4Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvR-3Y-UAK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelfgkopawjifLabelfgkopawjifLabelfgkopawjifLabelfgkopawjifLabelfgkopawjifLabelfgkopawjifLabelfgkopawjif" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2g-mb-BZy">
                                 <rect key="frame" x="16" y="447" width="343" height="80"/>
@@ -64,11 +76,23 @@
                                 <rect key="frame" x="247" y="535" width="98" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="Next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYK-Bv-Abt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Next" destination="FbZ-fG-loq" id="CCS-Cj-MVq"/>
+                        <outlet property="answer1" destination="Ehq-xJ-M9H" id="kRV-02-zTB"/>
+                        <outlet property="answer2" destination="Z2N-tK-qEw" id="rd1-cu-MYZ"/>
+                        <outlet property="answer3" destination="Mmw-4F-VxP" id="dri-vP-LqH"/>
+                        <outlet property="answer4" destination="svu-Id-Qvv" id="p7s-te-3SS"/>
+                        <outlet property="answerText" destination="h2g-mb-BZy" id="68r-02-TsV"/>
+                        <outlet property="question" destination="d9f-hB-OPN" id="FC0-58-GgC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
